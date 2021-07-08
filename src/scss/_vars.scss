@@ -1,0 +1,22 @@
+:root {
+  // цвета
+  --color-black: #000;
+  --color-white: #fff;
+  --color-white-text: #f6f6f6;
+  --color-dark-text: #585858;
+  --color-gray-text: #b5b5b5;
+  --color-tundora: #4c4c4c;
+  --color-accent-red: #ac3333;
+  --color-lang-text: #979797;
+  --color-menu-hover: #545454;
+  --color-button: #929292;
+
+  // шрифты
+  --font-family-text: "OpenSans", sans-serif;
+  --font-family-decor: "MrDeHaviland", sans-serif;
+  --font-text: 300 14px var(--font-family-text);
+  --font-menu: 300 18px var(--font-family-text);
+  --font-counter: 400 24px var(--font-family-text);
+  --font-contact-title: 600 18px var(--font-family-text);
+  --font-decor-name: 400 60px var(--font-family-decor);
+}

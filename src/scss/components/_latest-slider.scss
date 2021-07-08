@@ -1,0 +1,153 @@
+.latest-slider {
+  display: flex;
+  justify-content: center;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  &__photo {
+    margin-right: 32px;
+    max-width: 550px;
+
+    &-item {
+      max-height: 825px;
+    }
+
+    &-arrow {
+      position: absolute;
+      border: none;
+      width: 90px;
+      height: 80px;
+      background-color: var(--color-button);
+      transition: background-color 0.2s;
+      cursor: pointer;
+    }
+
+    &-icon {
+      width: 14px;
+      height: 25px;
+    }
+
+    &-arrow--next {
+      left: -170px;
+      bottom: 70px;
+      background-color: var(--color-accent-red);
+
+      &:hover {
+        background-color: #9a2f2f;
+      }
+
+      &:active {
+        background-color: #732220;
+      }
+    }
+
+    &-arrow--prev {
+      left: -260px;
+      bottom: 70px;
+
+      svg {
+        transform: rotate(180deg);
+      }
+
+      &:hover {
+        background-color: #7a7a7a;
+      }
+
+      &:active {
+        background-color: #636363;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: scale-down;
+  }
+
+  &__thumbnail {
+    width: 66px;
+  }
+
+  &__nav {
+    align-self: flex-start;
+
+    .slick-track {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-item {
+      position: relative;
+      margin-bottom: 10px;
+      width: 100% !important; // stylelint-disable-line declaration-no-important
+      max-width: 66px;
+      transition: background-color 1.2s;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(#fff, 0.5);
+        transition: background-color 1.2s;
+      }
+    }
+  }
+
+  &__descr {
+    margin-right: 80px;
+    text-align: right;
+    text-transform: uppercase;
+    color: var(--color-dark-text);
+  }
+
+  &__name {
+    margin-bottom: 10px;
+    font: var(--font-decor-name);
+    text-transform: none;
+  }
+
+  &__date {
+    margin-bottom: 21px;
+    letter-spacing: 0.1em;
+  }
+
+  &__text {
+    max-width: 140px;
+    letter-spacing: 0.1em;
+  }
+
+  &__counter {
+    position: absolute;
+    left: -260px;
+    bottom: 155px;
+    width: 180px;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: var(--color-button);
+    transition: 0.1s;
+  }
+}
+
+.latest-slider__nav-item.slick-current {
+  &::before {
+    background-color: transparent;
+    transition: background-color 1.2s;
+  }
+}
+
+@media screen and (max-width: 1024.98px) {
+  .latest-slider {
+    margin-bottom: 300px;
+    margin-top: 60px;
+}
+}

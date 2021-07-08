@@ -1,0 +1,36 @@
+@import "../mixins";
+
+.mobile-header {
+  // position: sticky;
+  // top: 0;
+  // z-index: 99;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  // padding: 0 15px;
+  // height: 70px;
+  
+  display: flex;
+  align-items: center;
+  background: #f6f6f6;
+  height: 70px;
+  z-index: 99;
+  position: sticky;
+  position: -webkit-sticky;
+  letter-spacing: .1em;
+  color: #585858;
+  top: 0;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+
+.burger {
+  --burger-width: 37px;
+  --burger-height: 25px;
+  --burger-line-height: 2px;
+
+  @include burger;
+}

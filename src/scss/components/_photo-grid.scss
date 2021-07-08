@@ -1,0 +1,92 @@
+.portfolio-grid {
+  display: grid;
+  grid-auto-rows: 50vh;
+  grid-template-columns: repeat(5, 1fr);
+  overflow: hidden;
+
+  &__link {
+    img {
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    &:hover img {
+      z-index: 2;
+      filter: drop-shadow(0 0 40px rgba(68, 68, 68, 0.9));
+      transform: scale(1.055);
+    }
+  }
+
+  &__image {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.lg-backdrop {
+  background: rgba(0, 0, 0, 0.52);
+}
+
+.lg-icon {
+  font-size: 0 !important;
+  background: 0 0 !important;
+}
+
+.lg-toolbar {
+  display: none;
+}
+
+.lg-close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 1070;
+  cursor: pointer;
+}
+
+.lg-close-icon {
+  width: 37px;
+  height: 25px;
+}
+
+#lg-counter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #d9d9d9;
+  transform: translate(220px, 409px);
+}
+
+.lg-next:hover svg rect {
+  fill: #9a2f2f;
+}
+
+.lg-next:active svg rect {
+  fill: #732220;
+}
+
+.lg-prev:hover svg rect {
+  fill: #7a7a7a;
+}
+
+.lg-prev:active svg rect {
+  fill: #636363;
+}
+
+.lg-img-wrap .lg-image {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 549px;
+  max-height: 822px;
+}
+
+@media screen and (max-height: 950px) and (min-width: 1024.98px) {
+  .lg-img-wrap .lg-image {
+    max-width: 488px;
+    max-height: 730px;
+  }
+
+  #lg-counter {
+    transform: translate(196px, 360px);
+  }
+}

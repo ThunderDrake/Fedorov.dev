@@ -1,0 +1,55 @@
+.contacts-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    color: var(--color-dark-text);
+
+    &:not(:last-child) {
+      margin-bottom: 90px;
+    }
+  }
+
+  a {
+    margin-bottom: 10px;
+    font: var(--font-menu);
+    color: inherit;
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 10px;
+    font: var(--font-contact-title);
+  }
+
+  &__position {
+    margin-bottom: 10px;
+    font: var(--font-menu);
+  }
+
+  &__inst {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: 20px;
+    width: 25px;
+    height: 25px;
+  }
+
+  &__name,
+  &__phone,
+  &__mail,
+  &__inst {
+    transition: font-weight 0.2s;
+
+    &:hover {
+      font-weight: 600;
+    }
+  }
+}
