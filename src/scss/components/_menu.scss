@@ -79,5 +79,11 @@
     width: 80%;
     max-width: none;
     background: rgba(88, 88, 88, 0.96);
+    transition: left 0.2s;
+  }
+
+  .menu.active {
+    left: 0;
+    transition: left 0.2s;
   }
 }

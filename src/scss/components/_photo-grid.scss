@@ -1,6 +1,6 @@
 .portfolio-grid {
   display: grid;
-  grid-auto-rows: 50vh;
+  grid-auto-rows: fit-content;
   grid-template-columns: repeat(5, 1fr);
   overflow: hidden;
 
@@ -18,8 +18,21 @@
 
   &__image {
     display: block;
+    width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  @media screen and (max-width: 1570px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media screen and (max-width: 1024.98px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (max-width: 646px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -89,4 +102,24 @@
   #lg-counter {
     transform: translate(196px, 360px);
   }
+}
+
+@media screen and (max-width: 1024.98px) {
+  .lg-img-wrap .lg-image {
+    max-width: 563px;
+    max-height: 811px;
+  }
+}
+
+@media screen and (max-width: 646px) {
+  .lg-img-wrap .lg-image {
+    max-width: 290px;
+    max-height: 418px;
+  }
+}
+
+@media screen and (max-width: 646px) {
+  #lg-counter {
+    transform: translate(91px, 209px);
+}
 }

@@ -44,6 +44,16 @@
       &:active {
         background-color: #732220;
       }
+
+      @media screen and (max-width: 1024.98px) {
+        left: 90px;
+        bottom: -80px;
+      }
+
+      @media screen and (max-width: 646px) {
+        bottom: -35px;
+        z-index: 2;
+      }
     }
 
     &-arrow--prev {
@@ -61,6 +71,24 @@
       &:active {
         background-color: #636363;
       }
+
+      @media screen and (max-width: 1024.98px) {
+        left: 0;
+        bottom: -80px;
+      }
+
+      @media screen and (max-width: 646px) {
+        bottom: -35px;
+        z-index: 2;
+      }
+    }
+
+    @media screen and (max-width: 1024.98px) {
+      max-width: 515px;
+    }
+
+    @media screen and (max-width: 646px) {
+      margin-right: 0;
     }
   }
 
@@ -99,6 +127,10 @@
         transition: background-color 1.2s;
       }
     }
+
+    @media screen and (max-width: 646px) {
+      display: none;
+    }
   }
 
   &__descr {
@@ -106,22 +138,48 @@
     text-align: right;
     text-transform: uppercase;
     color: var(--color-dark-text);
+
+    @media screen and (max-width: 1024.98px) {
+      position: absolute;
+      right: 50px;
+      bottom: -250px;
+      margin-right: 0;
+      max-width: 230px;
+    }
+
+    @media screen and (max-width: 646px) {
+      left: 15px;
+      right: unset;
+      text-align: left;
+    }
   }
 
   &__name {
     margin-bottom: 10px;
     font: var(--font-decor-name);
     text-transform: none;
+
+    @media screen and (max-width: 1024.98px) {
+      margin-bottom: 0;
+    }
   }
 
   &__date {
     margin-bottom: 21px;
     letter-spacing: 0.1em;
+
+    @media screen and (max-width: 1024.98px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__text {
     max-width: 140px;
     letter-spacing: 0.1em;
+
+    @media screen and (max-width: 1024.98px) {
+      max-width: none;
+    }
   }
 
   &__counter {
@@ -135,6 +193,15 @@
     text-align: center;
     color: var(--color-button);
     transition: 0.1s;
+
+    @media screen and (max-width: 1024.98px) {
+      left: 0;
+      bottom: -120px;
+    }
+
+    @media screen and (max-width: 646px) {
+      bottom: -80px;
+    }
   }
 }
 
@@ -147,7 +214,13 @@
 
 @media screen and (max-width: 1024.98px) {
   .latest-slider {
-    margin-bottom: 300px;
     margin-top: 60px;
+    margin-bottom: 300px;
+  }
 }
+
+@media screen and (max-width: 646px) {
+  .latest-slider.site-content {
+    padding: 0;
+  }
 }

@@ -63,4 +63,17 @@ $(document).ready(function() {
       startCounter(current() + 1);
       photoMiniActive();
   });
+
+  if($( window ).width() <= 576 ){
+    let width = $( window ).width();
+    $('.latest-slider__photo').css('width', `${width}`);
+}
+
+
+ $( window ).on('resize', () => {
+     if($( window ).width() <= 576 ){
+         let width = $( window ).width();
+         $('.latest-slider__photo').css('width', `${width}`);
+     }
+ });
 });
