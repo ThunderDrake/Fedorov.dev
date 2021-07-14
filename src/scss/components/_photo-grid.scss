@@ -113,13 +113,14 @@
 
 @media screen and (max-width: 646px) {
   .lg-img-wrap .lg-image {
-    max-width: 290px;
-    max-height: 418px;
+    height: auto !important;
+    max-width: 370px;
+    max-height: 533px;
   }
 }
 
 @media screen and (max-width: 646px) {
   #lg-counter {
-    transform: translate(91px, 209px);
+    transform: translate(91px, 260px);
 }
 }
