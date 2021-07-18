@@ -1,0 +1,27 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  &__img {
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    margin-bottom: 100px;
+    font: 600 24px var(--font-family-text);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-dark-text);
+  }
+
+  &__backlink {
+    font: 400 18px var(--font-family-text);
+    letter-spacing: 0.1rem;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: var(--color-dark-text);
+  }
+}
